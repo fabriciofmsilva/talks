@@ -78,6 +78,11 @@ $theme-purple: (
   bg: $amethyst,
   bg-dark: $wisteria
 );
+$theme-itau: (
+  color: #003767,
+  bg: #f47920,
+  bg-dark: #f47920
+);
 
 .reveal {
   h1,
@@ -93,6 +98,14 @@ $theme-purple: (
 
   p {
     margin-top: 0;
+  }
+
+  section {
+    img {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
   }
 
   .slides {
@@ -148,6 +161,56 @@ $theme-purple: (
   }
 }
 
+.theme-itau {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: map-get($theme-itau, "color");
+  }
+
+  [data-background-color="#f47920"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $white;
+    }
+
+    a {
+      color: rgba($white, 0.7);
+    }
+  }
+}
+
 .text-center {
   text-align: center !important;
+}
+
+.box {
+  display: inline-block;
+  padding: .5rem 1.5rem;
+  color: $white;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.images {
+  p {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  img[alt=Jest] {
+    height: 200px;
+  }
+
+  img[alt=Cucumber] {
+    width: 300px;
+  }
 }
