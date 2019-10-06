@@ -1,0 +1,153 @@
+/**
+  * My theme for reveal.js.
+  *
+  * By Fabrício Silva, http://fabriciofmsilva.com.br
+  */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+
+// ---------------------------------------------
+// Include theme-specific fonts
+
+@import url(../../../lib/font/open-sans/open-sans.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+$mainColor: #333;
+$headingColor: #333;
+$mainFontSize: 42px;
+$mainFont: "Open Sans", Helvetica, sans-serif;
+$headingFont: "Open Sans", Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+section.has-dark-background {
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+$torquoise: #1abc9c;
+$green-sea: #16a085;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+$wet-asphalt: #34495e;
+$midnight-blue: #2c3e50;
+$sun-flower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$white: #fff;
+
+$theme-red: (
+  color: $white,
+  bg: $alizarin,
+  bg-dark: $pomegranate
+);
+$theme-purple: (
+  color: $white,
+  bg: $amethyst,
+  bg-dark: $wisteria
+);
+
+.reveal {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.25rem;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .slides {
+    text-align: left;
+  }
+}
+
+.theme-red {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: map-get($theme-red, "bg");
+  }
+
+  .invert {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: map-get($theme-red, "color");
+    }
+  }
+}
+
+.theme-purple {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: map-get($theme-purple, "bg-dark");
+  }
+
+  .invert {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: map-get($theme-purple, "color");
+    }
+
+    a {
+      color: rgba(map-get($theme-purple, "color"), 0.7);
+    }
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
