@@ -111,6 +111,16 @@ $theme-itau: (
   .slides {
     text-align: left;
   }
+
+  pre {
+    width: 100%;
+    margin: auto;
+
+    code {
+      max-height: 720px;
+      padding: 2rem 2rem 2rem 1.5rem;
+    }
+  }
 }
 
 .theme-red {
@@ -206,11 +216,7 @@ $theme-itau: (
     justify-content: space-evenly;
   }
 
-  img[alt=Jest] {
-    height: 200px;
-  }
-
-  img[alt=Cucumber] {
-    width: 300px;
+  img {
+    max-height: 200px;
   }
 }

@@ -300,6 +300,13 @@ body {
 .reveal .slides {
   text-align: left; }
 
+.reveal pre {
+  width: 100%;
+  margin: auto; }
+  .reveal pre code {
+    max-height: 720px;
+    padding: 2rem 2rem 2rem 1.5rem; }
+
 .theme-red h1,
 .theme-red h2,
 .theme-red h3,
@@ -369,8 +376,5 @@ body {
   align-items: center;
   justify-content: space-evenly; }
 
-.images img[alt=Jest] {
-  height: 200px; }
-
-.images img[alt=Cucumber] {
-  width: 300px; }
+.images img {
+  max-height: 200px; }
